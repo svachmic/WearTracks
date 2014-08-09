@@ -536,6 +536,7 @@ public class TrackRecordingService extends Service {
     NotificationCompat.Builder builder = new NotificationCompat.Builder(this).setContentIntent(
         pendingIntent).setContentText(getString(messageId))
         .setContentTitle(getString(R.string.my_tracks_app_name)).setOngoing(true)
+        .setVibrate(new long[] { 1000, 1000, 1000, 1000, 1000 })
         .setSmallIcon(R.drawable.ic_stat_notify_recording).setWhen(System.currentTimeMillis());
     startForeground(1, builder.build());
   }
