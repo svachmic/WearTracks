@@ -17,6 +17,7 @@ public class Tracks extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tracks);
+        mTeleport = new TeleportClient(this);
         final WatchViewStub stub = (WatchViewStub) findViewById(R.id.watch_view_stub);
         stub.setOnLayoutInflatedListener(new WatchViewStub.OnLayoutInflatedListener() {
             @Override
@@ -28,10 +29,22 @@ public class Tracks extends Activity {
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                mTeleport.syncString("/track", "start");
             }
         });
 
 
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        mTeleport.connect();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        mTeleport.disconnect();
     }
 }
