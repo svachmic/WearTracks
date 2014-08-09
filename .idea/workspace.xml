@@ -89,8 +89,8 @@
       <file leaf-file-name="TrackRecordingService.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/google/android/apps/mytracks/services/TrackRecordingService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.41811848" vertical-offset="6495" max-vertical-offset="20010">
-              <caret line="531" column="20" selection-start-line="531" selection-start-column="20" selection-end-line="531" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.6010453" vertical-offset="6495" max-vertical-offset="20010">
+              <caret line="538" column="3" selection-start-line="538" selection-start-column="3" selection-end-line="538" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -1410,28 +1410,6 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WearTracks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WearTracks" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -1748,8 +1726,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/google/android/apps/mytracks/services/TrackRecordingService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41811848" vertical-offset="6495" max-vertical-offset="20010">
-          <caret line="531" column="20" selection-start-line="531" selection-start-column="20" selection-end-line="531" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.6010453" vertical-offset="6495" max-vertical-offset="20010">
+          <caret line="538" column="3" selection-start-line="538" selection-start-column="3" selection-end-line="538" selection-end-column="3" />
           <folding />
         </state>
       </provider>
