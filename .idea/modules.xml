@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/WearTracks.iml" filepath="$PROJECT_DIR$/WearTracks.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/mytrackslib/mytrackslib.iml" filepath="$PROJECT_DIR$/mytrackslib/mytrackslib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wear/wear.iml" filepath="$PROJECT_DIR$/wear/wear.iml" />
     </modules>
   </component>
 </project>

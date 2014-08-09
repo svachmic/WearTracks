@@ -1,0 +1,33 @@
+apply plugin: 'com.android.application'
+
+repositories {
+        jcenter()
+    flatDir {
+        dirs 'prebuilt-libs'
+    }
+}
+
+android {
+    compileSdkVersion 20
+    buildToolsVersion "20.0.0"
+
+    defaultConfig {
+        applicationId "com.google.android.apps.mytracks.wear"
+        minSdkVersion 20
+        targetSdkVersion 20
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile 'com.google.android.support:wearable:+'
+    compile 'com.google.android.gms:play-services-wearable:5.0.77'
+
+}
