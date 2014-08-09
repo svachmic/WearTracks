@@ -30,7 +30,8 @@ public class Tracks extends Activity {
                 mButton.setOnClickListener(new View.OnClickListener() {
                   @Override
                   public void onClick(View v) {
-                     mTeleport.sendMessage("/track", null);
+                      Log.d("Tag", "click");
+                      mTeleport.sendMessage("/track", null);
                   }
                });
 
@@ -45,6 +46,7 @@ public class Tracks extends Activity {
     @Override
     protected void onStart() {
         super.onStart();
+        Log.d("Tag", "onStart");
         mTeleport.connect();
         Wearable.NodeApi.getConnectedNodes(mTeleport.getGoogleApiClient()).setResultCallback(new ResultCallback<NodeApi
                 .GetConnectedNodesResult>() {
