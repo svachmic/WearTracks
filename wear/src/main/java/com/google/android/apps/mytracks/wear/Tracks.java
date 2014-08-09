@@ -26,7 +26,7 @@ public class Tracks extends Activity {
                 mButton.setOnClickListener(new View.OnClickListener() {
                   @Override
                   public void onClick(View v) {
-                     mTeleport.syncString("track", "start");
+                     mTeleport.sendMessage("/track", null);
                   }
                });
 
