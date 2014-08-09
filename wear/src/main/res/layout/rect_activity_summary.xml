@@ -15,7 +15,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="00:00"
+            android:text="17:00"
             android:id="@+id/tvHoursMinutes"
             android:layout_weight="0.3"
             android:textSize="46dp"
@@ -27,7 +27,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="00"
+            android:text="42"
             android:id="@+id/tvSeconds"
             android:layout_weight="0.7"
             android:gravity="bottom|left"
@@ -36,4 +36,25 @@
             android:textColor="@color/tracks_orange"
             />
     </LinearLayout>
+
+    <Button
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:text=""
+        android:id="@+id/button"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/sample"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:text="42.0 km"
+        android:id="@+id/tvDistance"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:textColor="@color/tracks_orange"
+        />
 </LinearLayout>
