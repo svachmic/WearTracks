@@ -16,14 +16,15 @@
 
 package com.google.android.apps.mytracks;
 
-import com.google.android.apps.mytracks.util.ApiAdapterFactory;
-import com.google.android.apps.mytracks.util.TrackIconUtils;
-
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.support.v4.app.FragmentActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.google.android.apps.mytracks.util.ApiAdapterFactory;
+import com.google.android.apps.mytracks.util.TrackIconUtils;
+import com.mariux.teleport.lib.TeleportClient;
 
 /**
  * An abstract class for all My Tracks activities.
@@ -32,9 +33,31 @@ import android.view.MenuItem;
  */
 public abstract class AbstractMyTracksActivity extends FragmentActivity {
 
-  @Override
+   private TeleportClient mTeleportClient;
+
+   /**
+    * Dispatch onStop() to all fragments.  Ensure all loaders are stopped.
+    */
+   @Override
+   protected void onStop() {
+      super.onStop();
+      mTeleportClient.disconnect();
+   }
+
+   /**
+    * Dispatch onStart() to all fragments.  Ensure any created loaders are
+    * now started.
+    */
+   @Override
+   protected void onStart() {
+      super.onStart();
+      mTeleportClient.connect();
+   }
+
+   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
+    mTeleportClient = new TeleportClient(this);
 
     // Set volume control stream for text to speech
     setVolumeControlStream(TextToSpeech.Engine.DEFAULT_STREAM);
@@ -98,4 +121,8 @@ public abstract class AbstractMyTracksActivity extends FragmentActivity {
   protected void onHomeSelected() {
     finish();
   }
+
+   public TeleportClient teleport() {
+      return mTeleportClient;
+   }
 }
