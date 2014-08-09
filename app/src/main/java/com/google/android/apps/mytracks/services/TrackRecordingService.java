@@ -55,6 +55,7 @@ import com.google.android.gms.location.LocationListener;
 import com.google.android.maps.mytracks.R;
 import com.google.common.annotations.VisibleForTesting;
 
+import android.app.Notification;
 import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Context;
@@ -533,10 +534,12 @@ public class TrackRecordingService extends Service {
    */
   @VisibleForTesting
   protected void startForegroundService(PendingIntent pendingIntent, int messageId) {
-    NotificationCompat.Builder builder = new NotificationCompat.Builder(this).setContentIntent(
+    NotificationCompat.WearableExtender extender = new NotificationCompat().WearableExtender().setHintHdeIcon(true);
+      NotificationCompat.Builder builder = new NotificationCompat.Builder(this).setContentIntent(
         pendingIntent).setContentText(getString(messageId))
         .setContentTitle(getString(R.string.my_tracks_app_name)).setOngoing(true)
-        .setVibrate(new long[] { 1000, 1000, 1000, 1000, 1000 })
+        .extend(extender)
+        .setVibrate(new long[]{1000, 1000, 1000, 1000, 1000})
         .setSmallIcon(R.drawable.ic_stat_notify_recording).setWhen(System.currentTimeMillis());
     startForeground(1, builder.build());
   }
