@@ -453,6 +453,8 @@ public class TrackRecordingService extends Service {
     WaypointType waypointType = waypointCreationRequest.getType();
     boolean isStatistics = waypointType == WaypointType.STATISTICS;
 
+    /* FIXME: sem by sla dat hlasova poznamka ... */
+
     // Get name
     String name;
     if (waypointCreationRequest.getName() != null) {
@@ -902,6 +904,8 @@ public class TrackRecordingService extends Service {
     PreferencesUtils.setLong(this, R.string.recording_track_id_key, trackId);
     recordingTrackPaused = paused;
     PreferencesUtils.setBoolean(this, R.string.recording_track_paused_key, recordingTrackPaused);
+
+    /* FIXME: sem dame cally kdyz se ma zapnout/vypnout nahravani? */
   }
 
   /**
@@ -969,6 +973,8 @@ public class TrackRecordingService extends Service {
         lastLocation = location;
         return;
       }
+
+      /* FIXME: tady mame novy bod z GPS...? */
 
       double distanceToLastTrackLocation = location.distanceTo(lastValidTrackPoint);
       if (distanceToLastTrackLocation > maxRecordingDistance) {
