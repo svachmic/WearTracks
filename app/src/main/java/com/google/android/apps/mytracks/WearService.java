@@ -1,5 +1,7 @@
 package com.google.android.apps.mytracks;
 
+import android.util.Log;
+
 import com.google.android.apps.mytracks.services.TrackRecordingServiceConnection;
 import com.google.android.apps.mytracks.util.TrackRecordingServiceConnectionUtils;
 import com.mariux.teleport.lib.TeleportService;
@@ -29,7 +31,8 @@ public class WearService extends TeleportService {
 
       @Override
       protected void onPostExecute(String path) {
-         if (path.equals("/start")) {
+         Log.d("Teleport", "getMessage " + path);
+         if (path.equals("/track")) {
             TrackRecordingServiceConnectionUtils.resumeTrack(trackRecordingServiceConnection);
          }
       }

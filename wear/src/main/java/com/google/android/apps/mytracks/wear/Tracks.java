@@ -17,21 +17,23 @@ public class Tracks extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tracks);
-        mTeleport = new TeleportClient(this);
+
         final WatchViewStub stub = (WatchViewStub) findViewById(R.id.watch_view_stub);
         stub.setOnLayoutInflatedListener(new WatchViewStub.OnLayoutInflatedListener() {
             @Override
             public void onLayoutInflated(WatchViewStub stub) {
                 mButton = (Button) stub.findViewById(R.id.button);
-            }
-        });
+                mButton.setOnClickListener(new View.OnClickListener() {
+                  @Override
+                  public void onClick(View v) {
+                     mTeleport.syncString("track", "start");
+                  }
+               });
 
-        mButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mTeleport.syncString("/track", "start");
+
             }
         });
+       mTeleport = new TeleportClient(this);
 
 
     }
