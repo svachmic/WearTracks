@@ -79,5 +79,6 @@ public class Tracks extends Activity {
     protected void onStop() {
         super.onStop();
         mTeleport.disconnect();
+        Log.d("Tag", "onStop");
     }
 }
