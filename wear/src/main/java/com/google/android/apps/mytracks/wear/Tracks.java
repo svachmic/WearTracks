@@ -3,11 +3,15 @@ package com.google.android.apps.mytracks.wear;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.wearable.view.WatchViewStub;
-import android.widget.TextView;
+import android.view.View;
+import android.widget.Button;
+
+import com.mariux.teleport.lib.TeleportClient;
 
 public class Tracks extends Activity {
 
-    private TextView mTextView;
+    private Button mButton;
+    TeleportClient mTeleport;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,8 +21,17 @@ public class Tracks extends Activity {
         stub.setOnLayoutInflatedListener(new WatchViewStub.OnLayoutInflatedListener() {
             @Override
             public void onLayoutInflated(WatchViewStub stub) {
-                mTextView = (TextView) stub.findViewById(R.id.text);
+                mButton = (Button) stub.findViewById(R.id.button);
             }
         });
+
+        mButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+
     }
 }
