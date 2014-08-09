@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="espresso-1.1-r2">
     <CLASSES>
-      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.jakewharton.espresso/espresso/1.1-r2/res" />
       <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.jakewharton.espresso/espresso/1.1-r2/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.jakewharton.espresso/espresso/1.1-r2/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
